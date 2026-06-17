@@ -1,0 +1,43 @@
+.kpi-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--color-primary);
+  min-width: 200px;
+}
+
+.kpi-green  { border-color: #16a34a; }
+.kpi-blue   { border-color: #2563eb; }
+.kpi-orange { border-color: #d97706; }
+.kpi-red    { border-color: #dc2626; }
+
+.kpi-title {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kpi-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.1;
+}
+
+.kpi-subtitle {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+}
+
+.kpi-trend {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.trend-up   { color: #dc2626; }  /* spending up = red = bad */
+.trend-down { color: #16a34a; }  /* spending down = green = good */

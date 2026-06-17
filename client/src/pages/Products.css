@@ -1,0 +1,98 @@
+.products-page { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.section-title { font-size: 1.4rem; font-weight: 700; color: var(--color-text); }
+
+.filters-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.search-input, .cat-select {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-family: 'Rubik', sans-serif;
+  background: #fff;
+  color: var(--color-text);
+  direction: rtl;
+}
+
+.search-input { flex: 1; min-width: 200px; }
+.search-input:focus, .cat-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px #dcfce7;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  position: relative;
+}
+.product-card:hover    { border-color: var(--color-primary-lt); box-shadow: var(--shadow-md); }
+.product-card.selected { border-color: var(--color-primary); }
+
+.product-name  { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.2rem; }
+.product-brand { font-size: 0.8rem; color: var(--color-muted); }
+.product-meta  { font-size: 0.75rem; color: var(--color-muted); margin-top: 0.4rem; }
+
+.product-delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
+}
+.product-card:hover .product-delete-btn { opacity: 1; }
+.product-delete-btn:hover { background: #fef2f2; }
+.product-delete-btn:disabled { cursor: not-allowed; opacity: 0.5; }
+
+.price-drawer {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.drawer-header h3 { font-size: 1rem; font-weight: 600; }
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.empty-msg {
+  color: var(--color-muted);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
